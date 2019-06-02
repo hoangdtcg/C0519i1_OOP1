@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Temperature = function (celsius) {
+        this.celsius = celsius;
+        this.getCelsius = function (celsius) {
+            return this.celsius;
+        }
+        this.getfahrenheit = function (F) {
+            return F=1.8*celsius + 32;
+        }
+        this.getKenvin = function (K) {
+            return K = celsius + 273.15;
+        }
+    }
+    let newTemperature = new Temperature(25);
+    let F = newTemperature.getfahrenheit();
+    let k = newTemperature.getKenvin();
+    document.write("giá trị F =" + F + "<br>");
+    document.write("giá trị K =" + K );
+</script>
+</body>
+</html>
