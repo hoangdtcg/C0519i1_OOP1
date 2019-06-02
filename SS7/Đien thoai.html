@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mo phong dien thoai</title>
+</head>
+<body>
+            <script>
+                const MAX_BATTERY = 100; // const hang so
+
+
+                function Mobile(name,battery) {
+                    this.name = name;
+                    this.battery = battery;
+                    this.status = false;
+                    this.messenger = "";
+                    this.inbox = [];
+                    this.outbox =[];
+                    this.getName = function () {
+                        return this.name;
+                    };
+                    this.setStatus = function(){
+                        this.status = status;
+                    };
+                    this.changeBattery = function () {
+                        if(this.battery < MAX_BATTERY){
+                            this.battery ++;
+                        }
+                    };
+                    this.setWriteMessenger = function () {
+                        this.messenger = text;
+                    };
+                    this.setSendMessenger = function () {
+                        mobile.inbox.push(this.messenger);
+                        this.outbox.push(this.messenger);
+                    };
+                    this.readMessenger = function(){
+                        return this.mobile;
+                    };
+                }
+
+                let mobile1 = new Mobile("iphone", 100);
+                let mobile2 = new Mobile("samsung", 100);
+                mobile1.setStatus(true);
+                let text = "hello world";
+                mobile1.setWriteMessenger("hello world");
+                mobile1.setSendMessenger(mobile2);
+                mobile2.inbox.push = text;
+                mobile1.outbox.push = text;
+                let read = mobile2.readMessenger();
+                alert(read);
+
+
+
+
+
+
+
+
+
+
+
+            </script>
+</body>
+</html>

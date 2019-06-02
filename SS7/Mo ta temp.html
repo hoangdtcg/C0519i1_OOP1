@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mo ta nhiet do</title>
+</head>
+<body>
+
+            <script>
+                    function temperature(temper) {
+                        this.temper = temper;
+                        this.gettemper = function () {
+                          return temper;
+                        };
+                        this.getF = function () {
+                           let F = temper*1.8 + 32;
+                            return F;
+                        };
+                        this.getK = function () {
+                          let  K = temper + 273.5;
+                            return K;
+                        }
+                    }
+                    let a = parseInt(prompt("Nhap nhiet do la: "));
+                    let temp = new temperature(a);
+                    let F = temp.getF();
+                    let K = temp.getK();
+                    let C = temp.gettemper();
+                    alert("F is " + F  + " AND " + " K is " + K + " C is " + C);
+            </script>
+</body>
+</html>

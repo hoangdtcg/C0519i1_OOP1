@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mo ta hinh chu nhat</title>
+</head>
+<body>
+<canvas id="rectangle" width="1200" height="900" style="border:1px solid #10ff19"></canvas>
+            <script>
+
+
+
+                    function myRectangle(height, width) {
+                        this.height = height;
+                        this.width = width;
+                        this.getArea = function () {
+                            return height*width;
+                        };
+                        this.getPerimeter = function () {
+                            return 2*(height+width);
+                        }
+                    }
+                    function createRectangle(){
+                        let ctx = document.getElementById("rectangle").getContext("2d");
+                        ctx.beginPath();
+                        ctx.rect(10,10,rectangle.height,rectangle.width);
+                        ctx.fill();
+                    }
+                    let a = parseInt(prompt("Nhap chieu dai: "));
+                    let b = parseInt(prompt("nhap chieu rong: "));
+                    let rectangle = new myRectangle(a,b);
+                    let Area = rectangle.getArea();
+                    let Perimerter = rectangle.getPerimeter();
+                    alert("Dien tich la: " + Area + " and " + "Chu vi la: " +  Perimerter);
+                    createRectangle();
+            </script>
+</body>
+</html>
