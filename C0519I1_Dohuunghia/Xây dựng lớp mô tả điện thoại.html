@@ -20,10 +20,14 @@
         };
         this.setName = function (name) {
             this.name = name;
-        }
+        };
         this.chargeBattery = function () {
-            if (this.battery < FULL_BATTERY){
-                 this.battery++;
+          let i = this.battery;
+          for ( ; i <= FULL_BATTERY; i++){
+                if ( this.battery === FULL_BATTERY){
+                    alert("Battery full");
+                    break;
+                }
             }
         };
         
