@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Convert Temperature</title>
+</head>
+<body>
+<script>
+    let Temperature = function (celsius) {
+        this.celsius = celsius;
+
+        this.getCelsius = function () {
+            return this.celsius;
+        };
+        this.convertCelsiusToFahrenheit = function () {
+            return 1.8 * this.celsius + 32;
+        };
+
+        this.convertCelsiusToKelvin = function () {
+            return this.celsius + 273;
+        };
+    };
+
+    let temperature = new Temperature(25);
+    let celsius = temperature.getCelsius();
+    let fahrenheit = temperature.convertCelsiusToFahrenheit();
+    let kelvin = temperature.convertCelsiusToKelvin();
+    console.log(celsius + " do C = " + fahrenheit + " do F");
+    console.log(celsius + " do C = " + kelvin + " do K");
+</script>
+</body>
+</html>
