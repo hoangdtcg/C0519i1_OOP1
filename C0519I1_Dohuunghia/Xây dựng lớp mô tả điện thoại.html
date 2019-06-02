@@ -6,6 +6,7 @@
 </head>
 <body>
 <script>
+    const FULL_BATTERY = 100;
     let Mobile = function (name , battery) {
         this.name = name;
         this.battery = battery;
@@ -21,9 +22,11 @@
             this.name = name;
         }
         this.chargeBattery = function () {
-            return this.battery++;
+            if (this.battery < FULL_BATTERY){
+                 this.battery++;
+            }
         };
-
+        
         this.writeMessage = function (msg) {
             this.msg = msg;
         };
