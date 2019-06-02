@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+</head>
+<body>
+<canvas  id="myCanvas" width="200" height="100" style="border:1px solid #000000;"></canvas>
+<script>
+    let myRetangle = function (width, height) {
+        this.height = height;
+        this.width = width;
+        this.getHeight = function () {
+            return this.height;
+        }
+        this.getwidth = function () {
+            return this.width;
+        }
+
+        this.setHeight = function(height) {
+            this.height = height;
+
+        }
+        this.setWith = function (width) {
+            this.width = width;
+        }
+        this.getArea = function () {
+            return this.width * this.height;
+
+        }
+        this.getChuvi= function (){
+            return 2*(this.width+ this.height);
+
+        }
+
+    }
+    let retangle = new myRetangle(100,50);
+    let Area = retangle.getArea();
+    let Chuvi = retangle.getChuvi();
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    ctx.moveTo(50,50);
+    ctx.lineTo(150,50);
+    // ctx.lineTo(150,100);
+    // ctx.lineTo(50,100);
+    // ctx.lineTo(50,50);
+
+
+
+
+
+
+</script>
+</body>
+</html>

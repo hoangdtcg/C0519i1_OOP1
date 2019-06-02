@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="100"></canvas>
+<script>
+    let myDate = function (day, month, year) {
+        this.day = day;
+        this.year = year;
+        this.month = month;
+
+        this.getDay = function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+        this.setDay = function (day) {
+            this.day = day;
+        }
+        this.setMonth = function (month) {
+            this.month = month;
+        }
+        this.setyear = function (year) {
+            this.year = year;
+
+        }
+
+
+    };
+
+    let date = new myDate(3, 5, 1996);
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+    alert(day + "/" + month + "/" + year);
+
+
+    date.setDay(22);
+    date.setMonth(7);
+    date.setyear(1996);
+    day = date.getDay();
+    month = date.getMonth();
+    year = date.getYear();
+    alert(day + "/" + month + "/" + year);
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+
+
+</script>
+</body>
+</html>
