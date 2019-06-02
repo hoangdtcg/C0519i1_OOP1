@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Mobile = function (name, battery) {
+        const MAX_BATTERRY = 100;
+        this.name = name;
+        this.battery = battery;
+        this.status = true;
+        this.messenger = "";
+        this.inbox = [];
+        this.outbox = [];
+        this.getName = function () {
+            return name;
+        };
+        this.setstatus = function () {
+            this.setstatus = status;
+        };
+        this.charge = function (battery) {
+            if (this.battery < MAX_BATTERRY) {
+                battery++;
+            }
+
+        };
+        this.writeMessenger = function () {
+            this.messenger = messenger;
+        };
+        this.sendMessenger = function (Phone) {
+            if (battery > 10) {
+                Phone.inbox.push(this.messenger);
+                this.outbox.push(this.messenger);
+            }
+            alert("Low battery, can't send");
+
+        };
+        this.receiveboxMessenger = function (Phone) {
+            this.inbox.push(Phone.messenger);
+
+        };
+        this.readInbox = function () {
+            return this.inbox;
+
+        };
+
+    };
+    let Samsung= new Mobile("samsung", 100);
+    let Iphone= new Mobile("iphone", 100);
+    alert(Samsung.getName());
+</script>
+</body>
+</html>

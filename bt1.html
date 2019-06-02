@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+Chieu dai:
+<input id="length" type="number">
+Chieu rong:
+<input id="width" type="number">
+<br>
+<button id="square" onclick="CalSquare()" value="Dien tich"> Dien tich</button>
+<button id="circuit" onclick="CalCircuit()" value="Chu vi"> Chu vi</button>
+<br>
+<button id="draw" onclick="drawrectangle()" value="Ve Canvas"> Ve Canvas</button>
+<canvas id="myCanvas" width="100px" height="100px" style="border:1px solid #d3d3d3;">
+<script>
+    let Rectangle = function (length, width) {
+        this.length = length;
+        this.width = width;
+        this.calSquare = function () {
+            let square = this.length * this.width;
+            return square;
+
+        };
+        this.calCircuit = function () {
+            circuit = (this.length + this.width) * 2;
+            return circuit;
+
+        }
+    };
+    let relength = document.getElementById("length");
+    let rewidth = document.getElementById("width");
+
+
+    function CalSquare() {
+        height = parseFloat(relength.value);
+        width = parseFloat(rewidth.value);
+        let reactangle = new Rectangle(height, width);
+        let square = parseFloat(reactangle.calSquare());
+        document.getElementById("square").innerText = "dien tich la: " + square;
+    };
+
+    function CalCircuit() {
+        height = parseFloat(relength.value);
+        width = parseFloat(rewidth.value);
+        let reactangle = new Rectangle(height, width);
+        let circuit = parseFloat(reactangle.calCircuit());
+        document.getElementById("circuit").innerText = "chu vi la:" + circuit;
+    };
+
+
+    function drawrectangle() {
+        height = parseFloat(relength.value);
+        width = parseFloat(rewidth.value);
+        let c = document.getElementById("myCanvas");
+        let ctx = c.getContext("2d");
+        ctx.moveTo(50, 50);
+        ctx.lineTo(50+height,50);
+        ctx.lineTo(height+50, width + 50);
+        ctx.lineTo(50, width+50);
+        ctx.lineTo(50, 50);
+        ctx.stroke();
+    };
+</script>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Temparture = function (C) {
+        this.C = parseFloat(C);
+        this.getF = function () {
+           let F = parseFloat(C * 18 + 32);
+            return F;
+
+        };
+        this.getK = function () {
+            let K = parseFloat(C + 273.15);
+            return K;
+        }
+
+    };
+    let newTemparture = new Temparture(25);
+    let F = newTemparture.getF();
+    let K =newTemparture.getK();
+
+    alert("Do F: "+ F +" ; "+ "Do K: "+ K);
+</script>
+</body>
+</html>
