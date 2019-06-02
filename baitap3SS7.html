@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng điện thoại</title>
+</head>
+<body>
+<script>
+            const FULL_BATTERY = 100;
+            let mobile = function (name, battery) {
+                this.battery = battery;
+                this.name = name;
+                this.inbox = [];
+                this.outbox = [];
+                this.msg = "";
+                this.status = true;
+                this.chargeBattery = function (battery) {
+                    if (this.battery < FULL_BATTERY){
+                        this.battery++;
+                    }
+                }
+                this.getName = function (name) {
+                    return this.name;
+                }
+                this.getStatus = function (status) {
+                    return this.status = status;
+                }
+                this.writeMessage = function (msg) {
+                    return this.writeMessage = msg;
+                }
+                this.sendMsg = function (outbox, inbox) {
+                    this.outbox.push();
+                    newphone2.inbox.push();
+                }
+
+            };
+            let newphone = new mobile("iphone", 100);
+            let newphone2 = new mobile("samsung", 100);
+            newphone.sendMsg("hello");
+            console.log(newphone.outbox);
+            console.log(newphone2.inbox);
+</script>
+</body>
+</html>

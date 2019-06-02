@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ Hình Chữ Nhật</title>
+</head>
+<body>
+<center><canvas id="myCanvas" width="600" height="600" style="border:1px solid hotpink" ></canvas></center>
+<script>
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    ctx.fillStyle = "#FF1CF8";
+    ctx.fillRect(230,220,150,100);
+    let Rectangle = function (length,width,) {
+        this.length = length;
+        this.width = width;
+        this.getLength = function (length) {
+            return this.length
+        }
+        this.getWidth = function (width) {
+            return this.width
+        }
+        this.acreage = function () {
+            return length*width;
+        }
+        this.perimeter = function () {
+            return 2*(length+width);
+        }
+    };
+    let newRectangle = new Rectangle(150,100);
+    let length = newRectangle.getLength();
+    let width = newRectangle.getWidth();
+    let acreage = newRectangle.acreage();
+    let perimeter = newRectangle.perimeter();
+    document.write("diện tích hình chữ nhật = " + acreage + "<br>");
+    document.write("chu vi hình chữ nhật bằng = " + perimeter);
+</script>
+
+</body>
+</html>
