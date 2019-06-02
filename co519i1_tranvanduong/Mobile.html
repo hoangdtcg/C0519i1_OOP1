@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Mobile = function (name, battery) {
+        this.name = name;
+        this.battery = battery;
+        this.msg = "";
+        this.inbox = [];
+        this.outbox = [];
+        this.status = true;
+        this.getName = function () {
+            return this.name;
+
+        }
+        this.setName = function () {
+            return
+
+
+        }
+        this.setStatus = function (status) {
+            this.status = status;
+
+
+        }
+        this.charge = function () {
+            if (this.battery < 100) {
+                this.battery++;
+            }
+
+        }
+        this.writeMessage = function (message) {
+            this.msg = message;
+
+        }
+        this.sendMessage = function (phone) {
+            phone.inbox.push(this.msg);
+            this.outbox.push(this.msg);
+
+
+        }
+        this.readMessage = function () {
+            return this.msg;
+        }
+
+
+    }
+    let iphone = new Mobile("iphone", 50);
+    let samsung = new Mobile("samsung", 70);
+
+
+    iphone.writeMessage("hello samsung");
+    iphone.sendMessage(samsung);
+    let a = samsung.inbox;
+    console.log(a);
+    console.log(iphone.readMessage());
+
+</script>
+</body>
+</html>
