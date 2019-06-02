@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="200" style="border:2px solid #d3d3d3;"></canvas>
+<br>
+<script>
+    let c = document.getElementById("myCanvas");
+    let ctx = c.getContext("2d");
+    ctx.fillStyle = "#FF0000";
+    ctx.fillRect(20, 20, 150, 100);
+    let Rectangle = function (length,width,) {
+        this.length = length;
+        this.width = width;
+        this.getLength = function (length) {
+            return this.length;
+        }
+        this.getWidth = function (width) {
+            return this.width;
+        }
+        this.acreage = function () {
+            return length*width ;
+        }
+        this.perimeter = function () {
+            return (length + width) * 2;
+        }
+    };
+    let newRectangle = new Rectangle(100,110);
+    let lenght = newRectangle.getLength();
+    let width = newRectangle.getWidth();
+    let acreage = newRectangle.acreage();
+    let perimeter = newRectangle.perimeter();
+    document.write("diện tích hình chữ nhật = " + acreage + "<br>");
+    document.write("chu vi hình chữ nhật =" + perimeter + "<br>");
+</script>
+</body>
+</html>

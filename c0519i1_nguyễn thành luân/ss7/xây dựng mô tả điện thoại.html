@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const MAX_BATTERY = 100;
+    let Mobile = function (name, battery) {
+        this.name = name;
+        this.battery = battery;
+        this.status = true;
+        this.msg = '';
+        this.inbox = [];
+        this.outbox = [];
+
+        this.sendmsg = function (msg) {
+            iphone.inbox.push(msg);
+            this.outbox.push(msg);
+        }
+        this.getName = function () {
+            return this.name;
+        }
+        this.setStatus = function (status) {
+            this.status = status;
+        }
+        this.chargeBattery = function () {
+            if (this.battery < MAX_BATTERY) {
+                this.battery++;
+            }
+        }
+        this.writeMessage = function (message) {
+            this.msg = message;
+        }
+        this.readinbox = function () {
+            return this.inbox;
+        }
+    }
+    let samsung = new Mobile('samsung', 100);
+    let iphone = new Mobile('iphone', 100);
+    samsung.writeMessage('lololol');
+    samsung.sendmsg('lololol');
+    console.log(samsung.outbox);
+    console.log(iphone.inbox);
+</script>
+</body>
+</html>
