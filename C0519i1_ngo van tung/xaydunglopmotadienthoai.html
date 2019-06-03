@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+            let Mobile = function( name,battery ) {
+            const MAX_BATTERY = 100; //const la hang so
+            this.name = name;
+            this.battery = battery;
+            this.status = true ;
+            this.msg ='';
+            this.inbox =[];
+            this.out =[];
+
+                this.getName =  function() {
+                    return this.Name
+                };
+                this.setStatus = function(status) {
+                    this.status = status;
+                };
+                this.chargeBattery = function() {
+                    if ( this.battery < MAX_BATTERY ) {
+                        this.battery++;
+                    }
+                };
+                this.writeMessage = function(message) {
+                    this.msg = message;
+                };
+                this.sendmsg = function(iphone) {
+                    phone.inbox.push (this.msg);
+                    this.outbox.push(this.msg)
+                };
+                this.readinbox = function() {
+                    return this.inbox
+                };
+                let samsung = new Mobile("samsung",100);
+                let iphone = new Mobile("iphone",100)
+        }
+
+    </script>
+</body>
+</html>
