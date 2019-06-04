@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    let MyDate = function (day, month, year) {
+        this.day = day;
+        this.month = month;
+        this.year = year;
+
+        this.getDay = function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+
+        this.setDate = function (day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+    };
+    let d = parseInt(prompt());
+    let m = parseInt(prompt());
+    let y = parseInt(prompt());
+    let date = new MyDate(2, 2, 2007);
+
+    date.setDate(d,m,y);
+
+    let day = date.getDay();
+    let month = date.getMonth();
+    let year = date.getYear();
+
+    alert(day + "/" + month + "/" + year);
+
+    //Cài đặt thêm phương thức setDate() để thiết đặt lại ngày, tháng, năm cho đối tượng MyDate
+    //và phương thức toString() để trả về chuỗi ngày tháng năm theo định dạng dd/mm/yyyy.
+
+
+</script>
+</body>
+</html>
