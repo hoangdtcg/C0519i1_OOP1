@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <canvas id="canvasRectangle" height="300px" width="500px" style="border: 3px solid #d3d3d3"></canvas>
+
+    <script>
+        function Rectangle(length, width){
+            this.length = length;
+            this.width = width;
+
+            this.getArea = function () {
+                return length*width;
+            }
+            this.getPerimeter = function () {
+                return 2*(length + width);
+            }
+        }
+        function createRectangle() {
+            let ctx = document.getElementById("canvasRectangle").getContext("2d");
+            ctx.beginPath();
+            ctx.rect(10,10,rectangle.length,rectangle.width);
+            ctx.stroke();
+        }
+        let a = parseInt(prompt("nhap chieu dai: "));
+        let b = parseInt(prompt("nhap chieu rong: "));
+        let rectangle = new Rectangle(a,b);
+
+        let Area = rectangle.getArea();
+        let Perimeter = rectangle.getPerimeter();
+
+        alert("dien tich la: " + Area + "," + " chu vi la: " + Perimeter)
+        createRectangle();
+
+    </script>
+</body>
+</html>
