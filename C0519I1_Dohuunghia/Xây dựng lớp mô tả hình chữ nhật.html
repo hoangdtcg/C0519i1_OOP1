@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id = "MyRectangle" width="400px" height="200px" style="border: 1px crimson solid"></canvas>
+<script>
+
+    let Rectangle = function (length, width) {
+        this.length =  length;
+        this.width = width;
+
+        this.getLength = function () {
+            return this.length;
+        };
+        this.setLength = function (length) {
+            this.length = length;
+        };
+
+        this.getWidth = function () {
+            return this.width;
+        };
+        this.setWidth = function (width) {
+            this.width = width;
+        };
+
+        this.areaRectangle = function () {
+            return this.length * this.width;
+        };
+
+        this.perimeterRectangle = function () {
+            return 2 * (this.width + this.length) ;
+        };
+
+        this.paintRectangle = function (ctx) {
+            ctx = canvas.getContext("2d");
+            ctx.fillRect(20, 20, this.length , this.width);
+        };
+
+
+    };
+    let canvas = document.getElementById('MyRectangle');
+    let rectangle = new Rectangle(100, 50);
+    rectangle.setLength(250);
+    rectangle.setWidth(100);
+    console.log("Dien tich hinh chu nhat la " + rectangle.areaRectangle());
+    console.log("Chu vi hinh chu nhat la " + rectangle.perimeterRectangle());
+    let ctx1 = "";
+    rectangle.paintRectangle(ctx1);
+</script>
+
+</body>
+</html>

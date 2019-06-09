@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    const PI = 3.14;
+    let MyCircle = function (radius) {
+        this.radius = radius;
+
+        this.getRadius = function () {
+            return this.radius;
+        };
+        this.setRadius = function (radius) {
+            this.radius = radius;
+        };
+        
+        this.getArea = function () {
+            return PI *this.radius *this.radius;
+        };
+
+        this.getPerimeter = function () {
+            return 2 * PI * this.radius;
+        }
+    };
+
+    let circle = new MyCircle(10, "red");
+    let radius = circle.getRadius();
+    let areaCircle = circle.getArea();
+    let perimeter = circle.getPerimeter();
+    alert("Dien tich hinh tron co ban kinh " + radius + " la " + areaCircle);
+    alert("Chu vi hinh trong co ban kinh " + radius + " la " + perimeter);
+</script>
+</body>
+</html>
